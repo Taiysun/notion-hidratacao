@@ -1,1 +1,151 @@
+body{
 
+    margin:0;
+    background:transparent;
+    font-family:Arial, sans-serif;
+}
+
+.container{
+
+    width:330px;
+    margin:auto;
+
+    padding:20px;
+
+    color:white;
+}
+
+h1{
+
+    margin:0 0 25px;
+
+    text-align:center;
+
+    tamanho da fonte:36px;
+}
+
+.linha{
+
+    exibir:flexível;
+
+    alinhar itens:centro;
+
+    justificar-conteúdo:centro;
+
+    lacuna:8px;
+
+    margem inferior:18px;
+}
+
+rótulo{
+
+    peso da fonte:audacioso;
+}
+
+.mais{
+
+    tamanho da fonte:28px;
+
+    peso da fonte:audacioso;
+}
+
+.ml{
+
+    peso da fonte:audacioso;
+}
+
+entrada{
+
+    largura:90px;
+
+    enchimento:8px;
+
+    tamanho da fonte:16px;
+
+    raio de borda:8px;
+
+    fronteira:nenhum;
+
+    esboço:nenhum;
+
+    alinhamento de texto:centro;
+}
+
+botão{
+
+    cursor:ponteiro;
+
+    fronteira:nenhum;
+
+    raio de borda:8px;
+
+    fundo:#2ECC71;
+
+    cor:branco;
+
+    enchimento:8px 12px;
+
+    tamanho da fonte:16px;
+
+    peso da fonte:audacioso;
+}
+
+botão:pairar{
+
+    opacidade:.9;
+}
+
+.texto do progresso{
+
+    margem superior:15px;
+
+    alinhamento de texto:centro;
+
+    tamanho da fonte:32px;
+
+    peso da fonte:audacioso;
+}
+
+.barra de progresso{
+
+    margem superior:15px;
+
+    largura:100%;
+
+    altura:18px;
+
+    fundo:#444;
+
+    raio de borda:10px;
+
+    transbordar:escondido;
+}
+
+.progressoPreenchimento{
+
+    largura:0%;
+
+    altura:100%;
+
+    fundo:#2ECC71;
+
+    transição:.3s;
+}
+
+.por cento{
+
+    margem superior:8px;
+
+    alinhamento de texto:centro;
+
+    peso da fonte:audacioso;
+}
+
+.redefinir{
+
+    largura:100%;
+
+    margem superior:25px;
+
+    fundo:#e74c3c;
+}
