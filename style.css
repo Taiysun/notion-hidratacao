@@ -1,25 +1,25 @@
-body{
+corpo{
 
-    margin:0;
-    background:transparent;
-    font-family:Arial, sans-serif;
+    Margem:0;
+    fundo:transparente;
+    família de fontes:Arial, sem serifa;
 }
 
-.container{
+.destino{
 
-    width:330px;
-    margin:auto;
+    largura:330px;
+    Margem:auto;
 
-    padding:20px;
+    enchimento:20px;
 
-    color:white;
+    cor:branco;
 }
 
 h1{
 
-    margin:0 0 25px;
+    Margem:0 0 25px;
 
-    text-align:center;
+    alinhamento de texto:centro;
 
     tamanho da fonte:36px;
 }
@@ -34,7 +34,7 @@ h1{
 
     lacuna:8px;
 
-    margem inferior:18px;
+    marca inferior:18px;
 }
 
 rótulo{
@@ -81,7 +81,7 @@ botão{
 
     fundo:#2ECC71;
 
-    cor:branco;
+    cor: #191919;
 
     enchimento:8px 12px;
 
@@ -90,16 +90,16 @@ botão{
     peso da fonte:audacioso;
 }
 
-botão:pairar{
+botão:par{
 
     opacidade:.9;
 }
 
 .texto do progresso{
 
-    margem superior:15px;
+    marca superior:15px;
 
-    alinhamento de texto:centro;
+    alinhamento de texto:centropx
 
     tamanho da fonte:32px;
 
@@ -108,11 +108,11 @@ botão:pairar{
 
 .barra de progresso{
 
-    margem superior:15px;
+    marca superior:15px;
 
     largura:100%;
 
-    altura:18px;
+    alta:18px;
 
     fundo:#444;
 
@@ -125,7 +125,7 @@ botão:pairar{
 
     largura:0%;
 
-    altura:100%;
+    alta:100%;
 
     fundo:#2ECC71;
 
