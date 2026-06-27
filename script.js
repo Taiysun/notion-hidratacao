@@ -1,97 +1,86 @@
-deixar meta = Número(armazenamento local.obterItem("objetivo")) || 0;
-deixar atual = Número(armazenamento local.obterItem("atual")) || 0;
+const metaInput = document.getElementById("meta");
+const consumoInput = document.getElementById("consumo");
 
-const metaEntrada = documento.obterElementoPorId("entrada de meta");
-const entrada de bebida = documento.obterElementoPorId("entrada de bebida");
+const salvarMeta = document.getElementById("salvarMeta");
+const adicionar = document.getElementById("adicionar");
+const reiniciar = document.getElementById("reiniciar");
 
-const extensão atual = documento.obterElementoPorId("atual");
-const alcance da meta = documento.obterElementoPorId("objetivo");
+const contador = document.getElementById("contador");
 
-const progressoPreenchimento = documento.obterElementoPorId("preenchimento de progresso");
-const por cento = documento.obterElementoPorId("porcentagem");
+let meta = Number(localStorage.getItem("meta")) || 0;
+let consumo = Number(localStorage.getItem("consumo")) || 0;
 
-função atualizar(){
+metaInput.value = meta > 0 ? meta : "";
 
-    extensão atual.textoConteúdo=atual;
+atualizar();
 
-    alcance da meta.textoConteúdo=meta;
+function atualizar(){
 
-    deixar p=0;
+    contador.textContent = `${consumo}/${meta}ml`;
 
-    se(meta>0){
-
-        p=(atual/meta)*100;
-
-    }
-
-    progressoPreenchimento.estilo.largura=Matemática.min(p,100)+"%";
-
-    por cento.textoConteúdo=Matemática.chão(p)+"%";
-
-    armazenamento local.definirItem("objetivo",meta);
-
-    armazenamento local.definirItem("atual",atual);
+    localStorage.setItem("meta", meta);
+    localStorage.setItem("consumo", consumo);
 
 }
 
-documento.obterElementoPorId("salvarObjetivo").clicar em=()=>{
+function definirMeta(){
 
-    deixar valor=Número(metaEntrada.valor);
+    const valor = Number(metaInput.value);
 
-    se(valor>0){
+    if(valor <= 0 || isNaN(valor)) return;
 
-        meta=valor;
-
-        metaEntrada.valor="";
-
-        atualizar();
-
-    }
-
-}
-
-documento.obterElementoPorId("adicionarBebida").clicar em=()=>{
-
-    deixar valor=Número(entrada de bebida.valor);
-
-    se(valor>0){
-
-        atual+=valor;
-
-        entrada de bebida.valor="";
-
-        atualizar();
-
-    }
-
-}
-
-documento.obterElementoPorId("reiniciar").clicar em=()=>{
-
-    atual=0;
+    meta = valor;
 
     atualizar();
 
 }
 
-metaEntrada.addEventListener("pressionamento de tecla",e=>{
+function adicionarConsumo(){
 
-    se(e.chave==="Entrar"){
+    const valor = Number(consumoInput.value);
 
-        documento.obterElementoPorId("salvarObjetivo").clique();
+    if(valor <= 0 || isNaN(valor)) return;
 
-    }
+    consumo += valor;
+
+    consumoInput.value = "";
+
+    atualizar();
+
+}
+
+salvarMeta.addEventListener("click", definirMeta);
+
+adicionar.addEventListener("click", adicionarConsumo);
+
+reiniciar.addEventListener("click", ()=>{
+
+    consumo = 0;
+
+    atualizar();
 
 });
 
-entrada de bebida.addEventListener("pressionamento de tecla",e=>{
+metaInput.addEventListener("keydown",(e)=>{
 
-    se(e.chave==="Entrar"){
-
-        documento.obterElementoPorId("adicionarBebida").clique();
-
-    }
+    if(e.key==="Enter") definirMeta();
 
 });
 
-atualizar();
+consumoInput.addEventListener("keydown",(e)=>{
+
+    if(e.key==="Enter") adicionarConsumo();
+
+});
+
+metaInput.addEventListener("input",()=>{
+
+    metaInput.value = metaInput.value.replace(/\D/g,"");
+
+});
+
+consumoInput.addEventListener("input",()=>{
+
+    consumoInput.value = consumoInput.value.replace(/\D/g,"");
+
+});
