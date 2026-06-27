@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,70 +7,48 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
 
     <h1>Hidrate-se</h1>
 
-    <div class="row">
-        <label>Nova meta:</label>
+    <div class="linha">
+        <label for="meta">Nova meta:</label>
 
         <input
-            id="goalInput"
+            id="meta"
             type="number"
+            inputmode="numeric"
+            min="0"
             placeholder="3000">
 
-        <button id="saveGoal">
-            ✓
-        </button>
+        <button id="salvarMeta">✓</button>
     </div>
 
-    <div class="row">
+    <div class="linha">
 
-        <span class="plus">+</span>
+        <span>+</span>
 
         <input
-            id="drinkInput"
+            id="consumo"
             type="number"
+            inputmode="numeric"
+            min="0"
             placeholder="250">
 
-        <span class="ml">ml</span>
+        <span>ml</span>
 
-        <button id="addDrink">
-            ✓
-        </button>
+        <button id="adicionar">✓</button>
 
     </div>
 
-    <div class="progressText">
-        <span id="current">0</span>/<span id="goal">0</span> ml
+    <div id="contador">
+        0/0ml
     </div>
 
-    <div class="progressBar">
-
-        <div
-            id="progressFill"
-            class="progressFill">
-        </div>
-
-    </div>
-
-    <div
-        id="percent"
-        class="percent">
-
-        0%
-
-    </div>
-
-    <button
-        id="reset"
-        class="reset">
-
+    <button id="reiniciar">
         Reiniciar consumo
-
     </button>
 
 </div>
