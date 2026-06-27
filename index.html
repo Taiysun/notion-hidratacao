@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidrate-se</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Hidrate-se</h1>
+
+    <div class="row">
+        <label>Nova meta:</label>
+
+        <input
+            id="goalInput"
+            type="number"
+            placeholder="3000">
+
+        <button id="saveGoal">
+            ✓
+        </button>
+    </div>
+
+    <div class="row">
+
+        <span class="plus">+</span>
+
+        <input
+            id="drinkInput"
+            type="number"
+            placeholder="250">
+
+        <span class="ml">ml</span>
+
+        <button id="addDrink">
+            ✓
+        </button>
+
+    </div>
+
+    <div class="progressText">
+        <span id="current">0</span>/<span id="goal">0</span> ml
+    </div>
+
+    <div class="progressBar">
+
+        <div
+            id="progressFill"
+            class="progressFill">
+        </div>
+
+    </div>
+
+    <div
+        id="percent"
+        class="percent">
+
+        0%
+
+    </div>
+
+    <button
+        id="reset"
+        class="reset">
+
+        Reiniciar consumo
+
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
